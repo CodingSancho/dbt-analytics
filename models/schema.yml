@@ -1,0 +1,49 @@
+# models/schema.yml
+version: 2
+
+models:
+  - name: ga_sessions_daily
+    description: "Daily aggregated Google Analytics sessions data"
+    columns:
+      - name: session_date
+        description: "Date of the session"
+      - name: session_count
+        description: "Count of sessions"
+      - name: unique_visitors
+        description: "Count of unique visitors"
+      - name: pageviews
+        description: "Total pageviews"
+      - name: transactions
+        description: "Number of transactions"
+      - name: revenue
+        description: "Revenue in USD"
+
+  - name: ga_sessions_monthly
+    description: "Monthly aggregated Google Analytics data"
+    columns:
+      - name: month
+        description: "Month of the session"
+      - name: total_sessions
+        description: "Total sessions in month"
+      - name: total_unique_visitors
+        description: "Total unique visitors in month"
+      - name: total_pageviews
+        description: "Total pageviews in month"
+      - name: total_transactions
+        description: "Total transactions in month"
+      - name: total_revenue
+        description: "Total revenue in month"
+
+  - name: monthly_sales_forecast
+    description: "Monthly sales with 3-month moving average forecast"
+    columns:
+      - name: month
+        description: "Month"
+      - name: actual_revenue
+        description: "Actual revenue"
+      - name: forecast_revenue
+        description: "Forecasted revenue using 3-month moving average"
+      - name: moving_avg_3m
+        description: "3-month moving average"
+      - name: forecast_error_pct
+        description: "Forecast error percentage"
